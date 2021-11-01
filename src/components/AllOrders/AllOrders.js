@@ -7,7 +7,7 @@ const AllOrders = () => {
   const [isDelete, setIsDelete] = useState(false);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/order")
+    fetch("https://glacial-citadel-29064.herokuapp.com/order")
       .then((res) => res.json())
       .then((data) => setOrder(data));
     setLoading(false);
@@ -18,7 +18,7 @@ const AllOrders = () => {
     // console.log(id);
     const proceed = window.confirm("are you sure, delete this package?");
     if (proceed) {
-      fetch(`http://localhost:5000/order/${id}`, {
+      fetch(`https://glacial-citadel-29064.herokuapp.com/order/${id}`, {
         method: "delete",
         headers: {
           "content-type": "application/json",

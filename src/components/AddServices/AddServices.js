@@ -13,7 +13,7 @@ const AddServices = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch(`http://localhost:5000/deliver`, {
+    fetch(`https://glacial-citadel-29064.herokuapp.com/deliver`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

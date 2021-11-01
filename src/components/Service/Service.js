@@ -7,7 +7,7 @@ const Service = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/deliver")
+    fetch("https://glacial-citadel-29064.herokuapp.com/deliver")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

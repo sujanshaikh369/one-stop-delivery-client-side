@@ -11,7 +11,7 @@ const PlaceOrder = () => {
   const [singleProduct, setSingleProduct] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/deliver/${id}`)
+    fetch(`https://glacial-citadel-29064.herokuapp.com/deliver/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSingleProduct(data);
@@ -26,7 +26,7 @@ const PlaceOrder = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/order", {
+    fetch("https://glacial-citadel-29064.herokuapp.com/order", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
