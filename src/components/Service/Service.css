@@ -1,0 +1,22 @@
+.card-image{
+    width: 100%;
+    height: 250px !important;
+    object-fit: contain;
+}
+
+.service-btn{
+    background: rgba(88, 86, 85, 0.671);
+    padding: 10px 45px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.card{
+    border: none !important;
+}
+
+.card-footer{
+    background: none !important;
+    border: none !important;
+}
