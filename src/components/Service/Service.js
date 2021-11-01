@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Card, CardGroup, Col, Container, Row, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Service.css'
+import React, { useEffect, useState } from "react";
+import { Card, CardGroup, Col, Container, Row, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./Service.css";
 
 const Service = () => {
-     const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch("http://localhost:5000/deliver")
@@ -24,7 +24,7 @@ const Service = () => {
         <Row lg={3} xs={1} className="g-4">
           {!loading ? (
             items.map((items) => (
-                <Col key={items._id}>
+              <Col key={items._id}>
                 <CardGroup className="cardGroup">
                   <Card className="card">
                     <Card.Img
@@ -36,7 +36,7 @@ const Service = () => {
                       <Card.Title>{items.title}</Card.Title>
                     </Card.Body>
                     <Card.Body className="py-0 description">
-                      <Card.Title>{items.des.slice(0, 90)}</Card.Title>
+                      <Card.Title>{items?.des?.slice(0, 90)}</Card.Title>
                     </Card.Body>
                     <Card.Body>
                       <Card.Body className="d-flex justify-content-between py-1">
@@ -46,9 +46,6 @@ const Service = () => {
                           <i className="fas fa-star"></i>
                           <i className="fas fa-star"></i>
                           <i className="fas fa-star"></i>
-                        </div>
-                        <div className="reviw-text">
-                          <p>{items?.reviw}</p>
                         </div>
                       </Card.Body>
                     </Card.Body>

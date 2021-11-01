@@ -13,6 +13,8 @@ import AllOrders from "./components/AllOrders/AllOrders";
 import MyOrder from "./components/MyOrder/MyOrder";
 import About from "./components/About/About";
 import Testimonial from "./components/News/Testimonial";
+import AddServices from "./components/AddServices/AddServices";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -33,12 +35,15 @@ function App() {
             <PrivateRoute path="/placeOrder/:id">
               <PlaceOrder />
             </PrivateRoute>
-            <Route path="/allOrders">
+            <PrivateRoute path="/allOrders">
               <AllOrders></AllOrders>
-            </Route>
-            <Route path="/myOrder">
+            </PrivateRoute>
+            <PrivateRoute path="/myOrder">
               <MyOrder></MyOrder>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/addservices">
+              <AddServices></AddServices>
+            </PrivateRoute>
             <Route path="/about">
               <About />
             </Route>
@@ -50,6 +55,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer />

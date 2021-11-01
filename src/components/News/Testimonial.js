@@ -15,15 +15,13 @@ const Testimonial = () => {
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Tom Cruise</h5>
                 <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  I do want to thank your company, especially Timolyn, for
+                  assisting me at the 11th hour in getting my documents picked
+                  up and successfully delivered. Dash Courier is now at the top
+                  of my list of preferred vendors! Thank you!
                 </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
               </div>
             </div>
           </div>
@@ -36,14 +34,12 @@ const Testimonial = () => {
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Sakib Khan</h5>
                 <p class="card-text">
-                  This card has supporting text below as a natural lead-in to
-                  additional content.
+                  I’ve been in customer service for a long time and have not run
+                  across anyone as nice and helpful as Sabrina…just wanted her
+                  to be recognized for making the process easy.
                 </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
               </div>
             </div>
           </div>
@@ -56,15 +52,13 @@ const Testimonial = () => {
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Salman Khan</h5>
                 <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
+                  Great customer service and very timely delivery. The driver
+                  was great and worked very hard to make it to the destination
+                  on time. I very much appreciate the hard work and
+                  communication!
                 </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
               </div>
             </div>
           </div>

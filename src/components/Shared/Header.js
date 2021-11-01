@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import "./Header.css";
 
 const Header = () => {
   const { user, handleLogOut } = useAuth();
@@ -22,10 +23,7 @@ const Header = () => {
             <Nav.Link as={Link} to={`/booking`} href="#action2">
               Services
             </Nav.Link>
-            <Nav.Link as={Link} to={`/login`}>
-              DashBoard
-            </Nav.Link>
-            <Nav.Link as={Link} to={`/login`} href="#action2">
+            <Nav.Link as={Link} to={`/testimonial`} href="#action2">
               Testimonial
             </Nav.Link>
             <Nav.Link as={Link} to={`/about`} href="#action2">
@@ -37,6 +35,9 @@ const Header = () => {
             <Nav.Link as={Link} to={`/myOrder`} href="#action2">
               My Order
             </Nav.Link>
+            <Nav.Link as={Link} to={`/addservices`} href="#action2">
+              Add Services
+            </Nav.Link>
             {!user?.email ? (
               <Nav.Link as={Link} to={`/login`}>
                 Login
@@ -47,6 +48,12 @@ const Header = () => {
               </Nav.Link>
             )}
           </Nav>
+          {user?.email && (
+            <Navbar.Text className="text-white">
+              Signed in as: <small className="pe-1">{user?.displayName}</small>
+              <img className="user-img" src={user?.photoURL} alt="" />
+            </Navbar.Text>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>
